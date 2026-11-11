@@ -1,0 +1,185 @@
+/* Hide Shorts Globally */
+ytd-rich-shelf-renderer[is-shorts],
+ytd-reel-shelf-renderer,
+a[title="Shorts"],
+ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+ytd-guide-entry-renderer:has(a[href*="/shorts"]) {
+  display: none !important;
+}
+
+/* Hide Comments */
+body.hide-comments #comments,
+body.hide-comments ytd-comments {
+  display: none !important;
+}
+
+/* Hide Recommendations */
+body.hide-recommendations #related,
+body.hide-recommendations ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+
+/* Hide Feed */
+body.hide-feed ytd-browse[page-subtype="home"] #contents {
+  display: none !important;
+}
+
+/* Intent Gate Modal */
+#yt-focus-gate-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 29, 0.96);
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #f8fafc;
+}
+
+.yt-focus-gate-box {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 480px;
+  padding: 28px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.yt-focus-gate-box h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #38bdf8;
+}
+
+.yt-focus-gate-box p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 18px;
+}
+
+.yt-focus-gate-input {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid #475569;
+  padding: 12px 14px;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.yt-focus-gate-btn {
+  background: #0284c7;
+  color: #fff;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px;
+  width: 100%;
+}
+
+/* Sidebar */
+#yt-study-sidebar {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.yt-study-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.yt-study-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.yt-study-stat {
+  font-size: 11px;
+  color: #94a3b8;
+  background: #1e293b;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.yt-current-intent-card {
+  background: #1e293b;
+  border-left: 3px solid #38bdf8;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  font-size: 12px;
+}
+
+.yt-current-intent-card .label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+.yt-current-intent-card .text {
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-top: 2px;
+}
+
+.yt-study-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.yt-study-item {
+  background: #1e293b;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.yt-study-item.active {
+  background: #0369a1;
+  color: #fff;
+}
+
+.yt-timestamp-badge {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.yt-ts-time {
+  color: #38bdf8;
+  font-family: monospace;
+  font-weight: 700;
+}
